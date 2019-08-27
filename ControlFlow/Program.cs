@@ -103,10 +103,10 @@ namespace ControlFlow
             int[] separatedNumbers = new int[numbers.Length/2 + 1];
             separatedNumbers[0] = numbers[0];
             Console.WriteLine(numbers[0]);
-            int maxNumber = numbers[0];
-            for (var i = 1; i < numbers.Length/2; i++)
+            int maxNumber = int.Parse(char.ToString(numbers[0]));
+            for (var i = 1; i < numbers.Length/2 + 1; i++)
             {
-                separatedNumbers[i] = int.Parse(char.ToString(numbers[i + 1]));
+                separatedNumbers[i] = int.Parse(char.ToString(numbers[i*2]));
                 if (maxNumber < separatedNumbers[i])
                 {
                     maxNumber = separatedNumbers[i];
@@ -117,8 +117,9 @@ namespace ControlFlow
             }
 
             Console.WriteLine(maxNumber);
-            
-            
+            Console.ReadKey();
+
+
         }
 
 
