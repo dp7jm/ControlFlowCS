@@ -72,10 +72,11 @@ namespace ControlFlow
         static void RandomPick()
         {
             var random = new Random();
-            var secretNumber = random.Next(10);
+            var secretNumber = random.Next(1,10);
+            
 
-            Console.WriteLine("guess number");
-            Console.WriteLine($"secret number {0}", secretNumber);
+            Console.WriteLine($"secret number {secretNumber}");
+
             for (int i = 0; i < 4; i++)
             {
                 var pickedNumber = int.Parse(Console.ReadLine());
