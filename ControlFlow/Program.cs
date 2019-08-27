@@ -10,8 +10,13 @@ namespace ControlFlow
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(DivisibleByThree());
-            EnterNumber();
+            //Console.WriteLine(DivisibleByThree());
+            //EnterNumber();
+            Console.WriteLine("enter numbers");
+            int factorialNumber = int.Parse(Console.ReadLine());
+            Console.WriteLine(Factorial(factorialNumber));
+
+
         }
         static int DivisibleByThree()
         {
@@ -47,6 +52,19 @@ namespace ControlFlow
                 }
             }
             Console.WriteLine(number);
+        }
+
+        static int Factorial(int number)
+        {
+            if (number == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return number * Factorial(number - 1);
+            }
+
         }
 
 
