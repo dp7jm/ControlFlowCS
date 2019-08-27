@@ -23,7 +23,7 @@ namespace ControlFlow
 
 
         }
-        public int DivisibleByThree()
+        static int DivisibleByThree()
         {
             int count = 0;
             for (int i = 1; i < 101; i++)
@@ -38,7 +38,7 @@ namespace ControlFlow
 
         }
 
-        public void EnterNumber()
+        static void EnterNumber()
         {
 
             int number = 0;
@@ -59,7 +59,7 @@ namespace ControlFlow
             Console.WriteLine(number);
         }
 
-        public int Factorial(int number)
+        static int Factorial(int number)
         {
             if (number == 1)
             {
@@ -72,7 +72,7 @@ namespace ControlFlow
 
         }
 
-        public void RandomPick()
+        static void RandomPick()
         {
             var random = new Random();
             var secretNumber = random.Next(1,10);
@@ -96,7 +96,7 @@ namespace ControlFlow
            
         }
 
-        public void maxNumber()
+        static void maxNumber()
         {
             Console.WriteLine("please enter numbers separated by coma");
             var numbers = Console.ReadLine();
