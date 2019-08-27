@@ -18,6 +18,7 @@ namespace ControlFlow
             //int factorialNumber = int.Parse(Console.ReadLine());
             //Console.WriteLine(Factorial(factorialNumber));
             //RandomPick();
+            maxNumber();
 
 
 
@@ -99,12 +100,13 @@ namespace ControlFlow
         {
             Console.WriteLine("please enter numbers separated by coma");
             var numbers = Console.ReadLine();
-            int[] separatedNumbers = new int[numbers.Length/2];
+            int[] separatedNumbers = new int[numbers.Length/2 + 1];
             separatedNumbers[0] = numbers[0];
+            Console.WriteLine(numbers[0]);
             int maxNumber = numbers[0];
             for (var i = 1; i < numbers.Length/2; i++)
             {
-                separatedNumbers[i] = numbers[i + 1];
+                separatedNumbers[i] = int.Parse(char.ToString(numbers[i + 1]));
                 if (maxNumber < separatedNumbers[i])
                 {
                     maxNumber = separatedNumbers[i];
