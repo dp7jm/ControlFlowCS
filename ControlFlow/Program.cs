@@ -10,6 +10,24 @@ namespace ControlFlow
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(DivisibleByThree());
+        }
+        static int DivisibleByThree()
+        {
+            int count = 0;
+            for(int i = 1; i < 101; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    count++;
+                }
+            }
+
+            return count;
+        
         }
     }
+
+
 }
+       
