@@ -26,6 +26,29 @@ namespace ControlFlow
             return count;
         
         }
+
+        static void EnterNumber()
+        {
+            
+            int number = 0;
+            bool isNumber = true;
+            while (isNumber) {
+                Console.WriteLine("Enter numbers and then pas ok");
+                var enteredNumber = Console.ReadLine();
+                if (enteredNumber == "ok")
+                {
+                    isNumber = false;
+                }
+                else
+                {
+                    number += int.Parse(enteredNumber);
+                }
+            }
+        }
+
+
+
+    }
     }
 
 
