@@ -11,11 +11,12 @@ namespace ControlFlow
         static void Main(string[] args)
         {
             Console.WriteLine(DivisibleByThree());
+            EnterNumber();
         }
         static int DivisibleByThree()
         {
             int count = 0;
-            for(int i = 1; i < 101; i++)
+            for (int i = 1; i < 101; i++)
             {
                 if (i % 3 == 0)
                 {
@@ -24,15 +25,16 @@ namespace ControlFlow
             }
 
             return count;
-        
+
         }
 
         static void EnterNumber()
         {
-            
+
             int number = 0;
             bool isNumber = true;
-            while (isNumber) {
+            while (isNumber)
+            {
                 Console.WriteLine("Enter numbers and then pas ok");
                 var enteredNumber = Console.ReadLine();
                 if (enteredNumber == "ok")
@@ -44,13 +46,13 @@ namespace ControlFlow
                     number += int.Parse(enteredNumber);
                 }
             }
+            Console.WriteLine(number);
         }
 
 
 
     }
-    }
-
-
 }
-       
+
+
+
