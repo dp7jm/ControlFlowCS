@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Win32.SafeHandles;
@@ -16,7 +17,8 @@ namespace ControlFlow
             //Console.WriteLine("enter numbers");
             //int factorialNumber = int.Parse(Console.ReadLine());
             //Console.WriteLine(Factorial(factorialNumber));
-            RandomPick();
+            //RandomPick();
+
 
 
         }
@@ -91,6 +93,30 @@ namespace ControlFlow
 
             }
            
+        }
+
+        static void maxNumber()
+        {
+            Console.WriteLine("please enter numbers separated by coma");
+            var numbers = Console.ReadLine();
+            int[] separatedNumbers = new int[numbers.Length/2];
+            separatedNumbers[0] = numbers[0];
+            int maxNumber = numbers[0];
+            for (var i = 1; i < numbers.Length/2; i++)
+            {
+                separatedNumbers[i] = numbers[i + 1];
+                if (maxNumber < separatedNumbers[i])
+                {
+                    maxNumber = separatedNumbers[i];
+                }
+
+
+
+            }
+
+            Console.WriteLine(maxNumber);
+            
+            
         }
 
 
